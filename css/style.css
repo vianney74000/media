@@ -105,7 +105,7 @@ img {
   flex-direction: column;
   position: fixed;
   align-items: flex-start;
-  background: #2f7fc2;
+  background: green;
 }
 
 .navbar .nested-ul li a {
