@@ -1,0 +1,1468 @@
+@font-face {
+  src: url("/font/Quentin.otf");
+  font-family: titres;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+/* BASE STYLES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600px;
+  line-height: 1.2;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(51, 51, 51,0.6);
+  color: #fff;
+  text-shadow: #000 1px 1px 2px;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0px;
+  padding: 0 5vw;
+  transition: 0.25s ease-in;
+  z-index: 2;
+  transform: translateY(-70px);
+}
+
+.navbar .ul {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.navbar .ul > li > a,
+.navbar .ul > li > label {
+  color: #fff;
+  padding: 11.5px 15px;
+  margin: 0 5px;
+  margin: 10px 5px;
+  display: block;
+}
+
+.navbar .ul > li:nth-child(2) {
+  display: none;
+}
+
+.navbar .ul #toggler-media {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transform: translateX(-100vw);
+}
+
+.navbar .ul #toggler-media:checked {
+  transform: translateX(0);
+}
+
+.navbar .nested-ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: flex-start;
+  background: #2f7fc2;
+}
+
+.navbar .nested-ul li a {
+  margin: 11.5px 20px;
+  display: block;
+  width: 240px;
+  display: none;
+  color: #fff;
+}
+
+.navbar li:nth-child(1):hover .nested-ul li a {
+  display: block;
+}
+
+.navbar li:nth-child(2) #toggler-media:checked + .nested-ul li a {
+  display: block;
+}
+
+.navbar li:nth-child(1) .nested-ul li:nth-child(2) a,
+.navbar li:nth-child(2) .nested-ul li:nth-child(2) a {
+  border-bottom: 1px dotted #fff;
+  border-top: 1px dotted #fff;
+  margin: 0 5px 0 20px;
+  padding: 11.5px 0 !important;
+}
+
+.navbar .sub-liste > div {
+  padding: none;
+}
+
+.navbar a:hover,
+.navbar .ul > li:nth-child(1):hover > a {
+  border-bottom: solid 2px #fff;
+  cursor: pointer;
+}
+
+.navbar a.sub-liste:hover {
+  border: none;
+}
+
+.actif {
+  border-bottom: solid 2px #fff;
+}
+
+.navbar .nested-ul li a:hover {
+  text-shadow: 0.1rem 0.1rem 1rem #fff;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background: transparent;
+  transform: translate(0);
+}
+
+.navbar a .logo {
+  width: 180px;
+  height: 50px;
+  background: url(/img/logo.png) center center/cover no-repeat;
+}
+
+.navbar a.lien-logo {
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+.navbar a.lien-logo:hover {
+  border: none;
+  box-shadow: 1px 1px 10px 1px #fff;
+}
+
+/* Hero */
+
+#hero {
+  background: url("/img/veran.jpg") center center/cover no-repeat;
+  height: 85vh;
+  min-height: 400px;
+  position: relative;
+  background-color: #fff;
+}
+
+#hero .content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+  padding: 100px 5vw 0 5vw;
+}
+
+#hero .content h2 {
+  font-size: 40px;
+  margin-bottom: 5vh;
+  max-width: 1200px;
+  z-index: 1;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* A mettre pour overlay */
+}
+#hero * {
+  z-index: 3;
+}
+
+/* Nos produits*/
+
+#selection {
+  padding: 10vh 0;
+}
+
+#selection_titre {
+  margin-bottom: 10vh;
+  font-size: 1.7rem;
+}
+
+#selection_contenu {
+  margin-bottom: 10vh;
+}
+
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+#selection .box {
+  display: flex;
+  flex-direction: column;
+  padding: 7vh 0vh 2vw;
+  width: 20vw;
+}
+
+#selection .box h3 {
+  font-size: 1.7rem;
+}
+
+#selection #boxe-2 {
+  width: 35vw;
+  padding: 0 2vw;
+  font-size: 1.2rem;
+}
+
+#selection #exotique {
+  background: url(/img/home/paysage-exo.jpg) center center/cover no-repeat;
+  transition: 1s;
+  height: 20vw;
+  border-radius: 2%;
+  margin-top: 5vh;
+  position: relative;
+  opacity: 1;
+}
+
+#selection #exotique:before {
+  content: "";
+  position: absolute;
+  background: url(/img/home/Pecheur-exo.jpg) center center/cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+  border-radius: 2%;
+}
+
+#selection #exotique:hover:before {
+  opacity: 0;
+}
+
+#selection #bretagne {
+  background: url(/img/home/paysage-bretagne.jpg) center center/cover no-repeat;
+  transition: 1s;
+  height: 25vw;
+  margin-top: 5vh;
+  border-radius: 2%;
+  position: relative;
+  opacity: 1;
+}
+
+#selection #bretagne:before {
+  content: "";
+  position: absolute;
+  background: url(/img/home/pecheur-bretagne.jpg) center center/cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+  border-radius: 2%;
+}
+
+#selection #bretagne:hover:before {
+  opacity: 0;
+}
+
+#selection #nordique {
+  background: url(/img/home/paysage-nord.jpeg) center center/cover no-repeat;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  height: 20vw;
+  border-radius: 2%;
+  margin-top: 5vh;
+  position: relative;
+  opacity: 1;
+}
+
+#selection #nordique:before {
+  content: "";
+  position: absolute;
+  background: url(/img/home/pecheur-nord.jpg) center center/cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+  border-radius: 2%;
+}
+
+#selection #nordique:hover:before {
+  opacity: 0;
+}
+
+#selection_mentra {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* photo background */
+
+#photo-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#photo-background img {
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* notre entreprise */
+
+#Notre-entreprise_contenu {
+  background: #f4f4f4;
+  height: 60vh;
+}
+
+#Notre-entreprise .column-1 img {
+  width: 90%;
+  max-height: 60vh;
+}
+
+#Notre-entreprise .column-1 {
+  width: 20%;
+  display: flex;
+  align-content: left;
+  justify-content: flex-end;
+}
+
+#Notre-entreprise .column-2 {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  width: 60%;
+}
+
+#Notre-entreprise .column-2 h2 {
+  margin-bottom: 5vh;
+  font-size: 1.5rem;
+}
+
+#Notre-entreprise .column-2 p {
+  margin-bottom: 5vh;
+}
+
+#Notre-entreprise .column-3 {
+  width: 20%;
+  display: flex;
+  align-content: left;
+  justify-content: flex-end;
+}
+
+#Notre-entreprise .column-3 img {
+  width: 100%;
+}
+
+/* poulpito */
+
+#poulpito {
+  position: fixed;
+  bottom: 7vh;
+  right: 3vw;
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  transform: translatey(200px);
+  animation: animate-1 7s forwards 5s normal ease-in-out;
+  padding: 1px 1px;
+}
+
+#poulpito-bulle {
+  position: fixed;
+  bottom: calc(7vh + 60px);
+  right: calc(3vw + 60px);
+  width: 230px;
+  height: 135px;
+  z-index: 10;
+  transform: scale(0);
+  animation: animate-2 7s forwards 5s normal ease-in-out;
+}
+
+#poulpito-bulle p:nth-child(2) {
+  color: #000;
+  font-size: 1rem;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  line-height: 140%;
+}
+#poulpito-bulle p:nth-child(3) {
+  color: #000;
+  font-size: 1rem;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+@keyframes animate-1 {
+  15% {
+    transform: translateY(0);
+    bottom: 7vh;
+    right: 3vw;
+    width: 80px;
+    height: 80px;
+  }
+
+  85% {
+    transform: translateY(0);
+    bottom: 7vh;
+    right: 3vw;
+    width: 80px;
+    height: 80px;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+    bottom: 3.5vh;
+    right: 1.5vw;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-2 {
+  10% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* FOOTER */
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vh 0;
+  color: #fff;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#footer a:hover {
+  color: #fff;
+  color: #2f7fc2 !important;
+  border-color: #2f7fc2;
+}
+
+#footer_left {
+  width: 33%;
+  text-align: left;
+  align-items: center;
+}
+
+#footer_logo {
+  width: 110px;
+  margin: 1rem 3rem;
+}
+
+#footer_contacts p {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+#footer_middle {
+  width: 33%;
+  font-size: 0.6rem;
+  justify-content: center;
+}
+
+#footer_middle #social i {
+  font-size: 3rem;
+  margin: 1vh 1vw;
+}
+
+#footer_right {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer_right > * {
+  border: solid 1px #fff;
+  padding: 0.5rem;
+  margin: 2rem 0.5rem;
+}
+
+#toggler {
+  -moz-appearance: initial;
+  opacity: 1;
+  position: fixed;
+  left: 33vw;
+  top: 6vh;
+  z-index: 20;
+  width: 25px;
+  height: 25px;
+  transform: translate(2000px, 2000px);
+  border-radius: 50%;
+}
+
+#toggler::before {
+  content: "";
+  text-align: center;
+  background: url(/img/close.png) center center / 30px no-repeat;
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border-radius: 50%;
+  z-index: 21;
+  cursor: pointer;
+}
+
+#toggler:hover {
+  width: 27px;
+}
+
+#toggler:checked {
+  transform: unset;
+  transition: 0.5s;
+}
+
+#footer #footer_label {
+  display: inline-block;
+}
+
+#footer #footer_label:hover {
+  cursor: pointer;
+  border-color: #2f7fc2;
+  color: #2f7fc2;
+}
+
+#footer #menu {
+  position: fixed;
+  top: 0;
+  left: 30vw;
+  background: url(/img/form.jpg) center center/cover;
+  transform: scale(0);
+  width: 40vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: #000;
+  border-radius: 10%;
+  z-index: 11;
+  border: none;
+  color: #fff;
+}
+
+#footer #menu::before {
+  content: "";
+  background: #000;
+  height: 1000%;
+  width: 1000%;
+  opacity: 0.5;
+  position: absolute;
+  border-radius: 10%;
+}
+
+#footer_right .content {
+  z-index: 12;
+}
+
+#footer #menu h3 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+#footer .form-control {
+  margin-top: 40px;
+}
+
+#footer .form-control #name,
+#footer .form-control #email,
+#footer .form-control #phone {
+  padding: 10px 20px;
+  background: #f4f4f4;
+}
+
+#toggler:checked + #menu {
+  transform: scale(1);
+  transition: 0.7s;
+}
+
+/* ----------- PAGE MER DE NORVEGE ---------------- */
+
+#mer-de-norvège {
+  overflow-x: hidden;
+}
+
+.bandeau .content {
+  padding-top: 15vh;
+}
+
+.bandeau_image {
+  margin: 5vh 0;
+  border: solid 2px #333;
+  background: #fff;
+}
+
+.bandeau_image img {
+  width: 35vw;
+  height: auto;
+}
+
+#mer-de-norvège
+  .container-deployable
+  > div:nth-child(1)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/Mer-de-norvege/deployable-elevage.png) center center/20vw
+    no-repeat;
+}
+
+#mer-de-norvège
+  .container-deployable
+  > div:nth-child(2)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/Mer-de-norvege/deployable-sauvage.png) center center/20vw
+    no-repeat;
+}
+
+/* ----------- POULPE ET BRETAGNE--------------- */
+
+#bretagne-et-poulpe {
+  overflow-x: hidden;
+}
+
+#notre-projet {
+  background: #f4f4f4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_notre-projet {
+  width: 75%;
+  margin: auto;
+}
+
+#notre-projet .flex-items {
+  width: 100%;
+}
+
+#notre-projet h2 {
+  color: #000;
+}
+
+#notre-projet .flex-columns {
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+}
+
+#notre-projet::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 5%;
+  background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
+    no-repeat;
+  background-size: 7vw 65%;
+  height: 80%;
+  width: 10%;
+  transform: rotate(-25deg);
+}
+#notre-projet::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 85%;
+  background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
+    no-repeat;
+  background-size: 7vw 65%;
+  height: 80%;
+  width: 10%;
+  transform: rotate(25deg);
+}
+
+#notre-projet .flex-item {
+  margin-top: 20px;
+  width: 40%;
+  padding: 0 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+#notre-projet .flex-item > div a:hover {
+  opacity: 0.8;
+}
+
+#notre-projet .flex-item > div {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#notre-projet .flex-item a {
+  height: auto;
+  width: 70%;
+}
+
+#notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
+  width: 20vw;
+  padding: 20px;
+}
+#notre-projet .container_notre-projet .flex-columns:nth-child(3) img {
+  width: 100%;
+  height: 14vw;
+}
+
+/* ------------EXOTIQUE TRADITIONEL ------------- */
+
+#exotique-traditionel-page
+  .container-deployable
+  > div:nth-child(2)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/exotique-traditionel/deployable-filet.png) center
+    center/20vw no-repeat;
+}
+
+#exotique-traditionel-page
+  .container-deployable
+  > div:nth-child(1)
+  .grid-item-deployable2
+  > div {
+  background: url(/img/exotique-traditionel/deployable-entier.png) center
+    center/20vw no-repeat;
+}
+
+/* ----------- CONTACT PAGE ----------------- */
+
+#contact {
+  height: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1300px;
+  background: url(/img/contact/fond-ecran-flou.jpg) center center/cover;
+  z-index: -1;
+}
+
+#contact_content {
+  background: rgba(244, 244, 244, 0.7);
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: #000;
+  border: none;
+  border-radius: 10%;
+  margin-top: 80px;
+  text-align: center;
+}
+
+#contact #menu h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+#contact .form-control {
+  margin-top: 40px;
+}
+
+#contact .form-control > input,
+#contact .form-control > textarea,
+#contact .form-control > select {
+  width: 100%;
+  padding: 10px 20px;
+  background: #f4f4f4;
+  outline-color: #2f7fc2;
+}
+
+#contact .champ-requis {
+  color: red;
+  text-align: left;
+  font-size: 0.7rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* blog */
+
+#blog {
+  background: #f4f4f4;
+}
+
+.date {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin: 0.25rem 0;
+}
+
+.date-secondaire {
+  background: #263670;
+}
+.date-primaire {
+  background: green;
+}
+.date-tertiaire {
+  background: orange;
+}
+
+.container {
+  max-width: 1200pw;
+  margin: auto;
+  padding: 0 3vw;
+  overflow: hidden;
+}
+
+.card {
+  padding: 2vh 2vw;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  background: #fff;
+}
+
+#showcase {
+  color: #fff;
+  text-shadow: #000 1px 1px 2px;
+  padding: 2vw 2vh;
+  position: relative;
+
+  /* Pour créer un overlay sur la photo blog à la une - à mettre si photo trop claire - */
+
+  /* background: #333; */
+}
+
+#showcase::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/img/blog/article-une.jpg") no-repeat center center/cover;
+
+  /* Pour créer un overlay sur la photo blog à la une - à mettre si photo trop claire - */
+
+  /* opacity: 0.4; */
+}
+
+
+#showcase .showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin-top: 60px;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#blog #home-article h3 {
+  font-size: 1.5rem;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
+
+#home-article .articles-container {
+  display: grid;
+  grid-template-rows: repeat (4, 400px);
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#home-article .card:nth-child(6n + 1) {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+#home-article .card:nth-child(6n + 2) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#home-article .card:nth-child(6n + 3) {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#home-article .card:nth-child(6n + 4) {
+  grid-column: 1;
+  grid-row: 3 / span 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+}
+#home-article .card:nth-child(6n + 5) {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+#home-article .card:nth-child(6n + 6) {
+  grid-column: 2 / span 2;
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+#article .meta .category {
+  margin-top: 7px;
+}
+
+/* ----- Decouvrir Ikagel ------- */
+
+#decouvrir-ikagel {
+  overflow-x: hidden;
+}
+
+#decouvrir-ikagel h1 {
+  padding: 10px 20px;
+  font-size: 3rem;
+}
+
+#decouvrir-ikagel h2 {
+  font-size: 2rem;
+}
+
+#notre-activite {
+  /* height: 80vh; */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  background: #f4f4f4;
+  padding: 80px 0;
+}
+
+#notre-activite::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 2%;
+  background: url(/img/exotique-traditionel/algues-gauche.png) center center/7vw
+    no-repeat;
+  height: 120%;
+  width: 10%;
+  transform: rotate(-25deg);
+}
+#notre-activite::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 88%;
+  background: url(/img/exotique-traditionel/algues-droite.png) center center/7vw
+    no-repeat;
+  height: 120%;
+  width: 10%;
+  transform: rotate(25deg);
+}
+
+#notre-activite .flex-row > * {
+  margin-top: 5vh;
+}
+
+#notre-activite .container {
+  width: 70vw;
+}
+
+#notre-proximite {
+  text-align: center;
+  justify-self: center;
+  padding: 5vh 0 15vh 0;
+  background: #f4f4f4;
+}
+
+#notre-proximite .grid-container {
+  padding: 5vh 10vw;
+}
+
+#notre-proximite .grid-container > div {
+  justify-self: center;
+  align-self: center;
+}
+
+#notre-proximite .grid-container .pirogue {
+  width: 250px;
+}
+
+#notre-proximite .grid-container .bateau {
+  width: 350px;
+}
+
+#notre-proximite .grid-container > div img {
+  width: 100%;
+}
+
+#notre-histoire {
+  background: #f4f4f4;
+  text-align: center;
+  justify-self: center;
+  padding: 10vh 0 10vh 0;
+}
+
+#notre-histoire .flex-item:nth-child(1) {
+  padding: 0 3vw;
+  width: 33%;
+}
+#notre-histoire .flex-item:nth-child(2) {
+  width: 60%;
+  margin: 0 50px;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+
+#notre-histoire .flex-item:nth-child(1) {
+  position: relative;
+}
+
+#notre-histoire .flex-item:nth-child(1) .ponton {
+  background: url(/img/decouvrir-ikagel/ponton.png) center center no-repeat;
+  background-size: auto 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#rope1 {
+  height: 7vh;
+  background: url(/img/decouvrir-ikagel/rope-17098.png) center center/cover;
+  width: 120%;
+  transform: translate(-50px, -50%);
+}
+#rope2 {
+  height: 7vh;
+  background: url(/img/decouvrir-ikagel/rope-17098.png) center center/cover;
+  width: 120%;
+  transform: translate(-50px, 50%);
+}
+#rope3 {
+  height: 7vh;
+  background: url(/img/decouvrir-ikagel/rope-17098.png) center center/370px
+    no-repeat;
+  width: 450px;
+  transform: translateY(-80px);
+}
+
+#mot-dirigeant {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding-top: 10vh;
+  border-top: 2px solid #333;
+}
+
+#mot-dirigeant > h2 {
+  padding: 2vh 2vw;
+  background: #f4f4f4;
+  display: inline-block;
+  border-radius: 2%;
+  border: #333 solid 2px;
+}
+
+#mot-dirigeant .line {
+  margin: unset;
+  background: #333;
+  border: none;
+  height: 2px;
+}
+
+#mot-dirigeant > .flex-columns > div {
+  width: 50%;
+  margin: 0 4vw 4vw 4vw;
+  font-family: "Catamaran", sans-serif;
+  background: #f4f4f4;
+  border-radius: 2%;
+  border: #333 solid 1px;
+}
+
+#mot-dirigeant .flex-row > * {
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+#mot-dirigeant .flex-columns .flex-columns > * {
+  padding: 2vh 2vw;
+  border-radius: 10%;
+}
+
+#mot-dirigeant .flex-columns .flex-columns {
+  justify-content: center;
+  align-items: center;
+}
+
+#mot-dirigeant .signature-langlois {
+  font-size: 2.5rem;
+  font-family: signature;
+}
+
+#mot-dirigeant .phrase-dirigeant {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+#mot-dirigeant .photo-langlois {
+  width: 14vw;
+  margin: 1.5vh 0;
+}
+
+/* ----- SUB PRODUCT PAGE ---------- */
+
+.sub-product > img {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 1600px;
+  height: 100%;
+  min-height: 1000px;
+  z-index: -1;
+}
+#sub-product_content h1 {
+  text-align: center;
+}
+
+#sub-product_content {
+  margin: 20vh auto;
+  background: rgba(244, 244, 244, 0.8);
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: #000;
+  border: none;
+  border-radius: 10%;
+}
+
+#sub-product_content h1 {
+  margin: 5vh 0;
+  font-size: 2rem;
+}
+
+#sub-product_content h2,
+#sub-product_content .btn {
+  margin-top: 5vh;
+}
+
+#sub-product_content h2 {
+  margin-bottom: 3vh;
+}
+
+.grid-4-columns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-4-columns.container-deployable {
+  height: unset;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-4-columns .grid-item-deployable,
+.grid-4-columns .grid-item-deployable > div {
+  height: 70px;
+}
+
+.grid-4-columns .grid-item-deployable:hover,
+.grid-4-columns .grid-item-deployable:hover > img {
+  height: 150px;
+}
+
+.grid-4-columns > div {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- fiche produit -------- */
+
+#fiche-produit > div {
+  color: #000;
+  font-size: 1.1vw;
+}
+
+.flex-columns {
+  position: relative;
+  justify-content: center;
+}
+
+#fiche-produit .column-1 {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  background: #fff;
+  background: url(/img/fiches-produit/Fond-spécialité-left.jpg) center
+    center/100%;
+  left: 0;
+}
+
+#fiche-produit .column-3 {
+  width: 15%;
+  height: 100%;
+  background: #fff;
+  background: url(/img/fiches-produit/Fond-spécialité-rigth.jpg) center
+    center/100%;
+  position: absolute;
+  right: 0;
+}
+
+#fiche-produit .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  padding: 15vh 3vw 10vh 3vw;
+  background: #f4f4f4;
+}
+
+#fiche-produit .column-2 .contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+#fiche-produit .column-2 .contenu h1 {
+  text-align: center;
+  font-size: 3vw;
+}
+
+#fiche-produit .column-2 .contenu > div:nth-child(1) {
+  width: 100%;
+}
+
+#fiche-produit
+  .column-2
+  .contenu
+  > div:nth-child(1)
+  .algues-horizontale-gauche {
+  margin-right: 0;
+  height: 4vw;
+  margin-top: 15px;
+}
+
+#fiche-produit
+  .column-2
+  .contenu
+  > div:nth-child(1)
+  .algues-horizontale-droite {
+  margin-left: 0;
+  height: 4vw;
+  margin-top: 15px;
+}
+
+#fiche-produit .column-2 .photos-poulpe,
+#fiche-produit .column-2 .flex-columns > a {
+  padding: 10px;
+  width: 45%;
+  max-height: 600px;
+  height: 28vw;
+  margin: 2.5%;
+  background: #fff;
+  border-radius: 2%;
+  color: #000;
+}
+
+#fiche-produit .column-2 a img {
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  text-align: center;
+  padding: 1vw 0 0.3vw 0;
+}
+
+#fiche-produit .column-2 .fiche-produit_description {
+  background: #fff;
+  margin: 0 2.5% 5% 2.5%;
+  border-radius: 1%;
+  color: #000;
+}
+
+/* fiche produit poulpe */
+
+#fiche-produit .photos-poulpe {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 19vw !important;
+}
+
+#fiche-produit .photos-poulpe + a {
+  height: 19vw !important;
+}
+
+#fiche-produit .photos-poulpe a:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#poulpito-spe {
+  position: absolute;
+  top: 16vh;
+  left: 22vw;
+  width: 5vw;
+  height: 5vw;
+}
+
+#poulpe-cuit .conditionnements {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 1.5%;
+  margin-bottom: 30px;
+}
+
+#poulpe-cuit .conditionnement {
+  width: 33%;
+  margin: 0 1%;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#poulpe-cuit .conditionnement h4 {
+  text-align: center;
+}
+
+#poulpe-cuit .conditionnement a img {
+  width: 100%;
+  height: auto;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+/* Blog post - Skrei */
+
+#blog .contenu a.btn {
+  margin: auto;
+  margin-top: 30px;
+}

@@ -1,0 +1,809 @@
+/* Ipad */
+
+@media (max-width: 1100px) {
+  /* HOME */
+
+  #navbar {
+    flex-direction: column;
+    height: unset;
+  }
+
+  #navbar .logo {
+    margin-top: 1vh;
+  }
+
+  .navbar .ul > li:nth-child(1) {
+    display: none;
+  }
+
+  .navbar .ul > li:nth-child(2) {
+    display: block;
+  }
+
+  #selection {
+    padding: 5vh 0;
+  }
+
+  #selection_titre {
+    margin: 4vh 0;
+  }
+
+  #selection_contenu {
+    margin-bottom: 0;
+  }
+
+  #selection_contenu.flex-items {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #selection #boxe-1,
+  #selection #boxe-2,
+  #selection #boxe-3 {
+    width: 100%;
+    padding: 2vh 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #selection .box h3 {
+    font-size: 2rem;
+  }
+
+  #selection .box a {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  #selection #nordique,
+  #selection #exotique,
+  #selection #bretagne {
+    width: 100%;
+    height: 80%;
+  }
+
+  #selection #bretagne {
+    order: 1;
+  }
+  #selection #exotique {
+    order: 2;
+  }
+  #selection #exotique {
+    order: 3;
+  }
+
+  #selection #exotique:hover:before,
+  #selection #bretagne:hover:before,
+  #selection #nordique:hover:before {
+    opacity: 1;
+  }
+
+  .encart-transparent {
+    height: 30vh;
+  }
+
+  #Notre-entreprise_contenu {
+    height: 30vh;
+  }
+
+  #Notre-entreprise #Notre-entreprise_contenu h2 {
+    width: 100vw;
+    margin-bottom: 3vh;
+  }
+  #Notre-entreprise #Notre-entreprise_contenu p {
+    margin-bottom: 2vh;
+  }
+
+  #photo-background {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    width: 200vw;
+    height: 100vh;
+    z-index: -1;
+    transform: translate(-50%, 10%);
+  }
+
+  #bretagne-et-poulpe #photo-background {
+    transform: translate(-25%, 10%);
+  }
+
+  #photo-background img {
+    width: 100%;
+  }
+
+  /* footer */
+
+  #footer_logo {
+    width: 110px;
+    margin: 0.5rem 1rem;
+  }
+
+  #footer #menu {
+    width: 80vw;
+    left: 10vw;
+    height: 80vh;
+  }
+
+  #footer #toggler {
+    left: 15vw;
+  }
+
+  /* PAGE CONTACT */
+
+  #contact_content {
+    margin-top: 140px;
+  }
+
+  /* BLOG */
+
+  #home-article .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #home-article .card:nth-child(3n + 1) {
+    grid-row: unset;
+    grid-column: unset;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  #home-article .card:nth-child(3n + 2) {
+    grid-row: unset;
+    grid-column: unset;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  #home-article .card:nth-child(3n + 3) {
+    grid-row: unset;
+    grid-column: unset;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  /* Decouvrir Ikagel */
+
+  #decouvrir-ikagel main {
+    overflow-x: hidden;
+  }
+
+  #decouvrir-ikagel h2 {
+    font-size: 1.7rem;
+  }
+
+  #notre-activite {
+    padding-top: 150px;
+    /* height: 850px; */
+  }
+  #notre-activite .container {
+    margin: unset;
+  }
+  #notre-activite::before,
+  #notre-activite::after {
+    display: none;
+  }
+  #notre-activite .container {
+    width: 85vw;
+  }
+
+  #notre-proximite {
+    padding-bottom: 5vh;
+  }
+
+  #notre-proximite .line {
+    display: none;
+  }
+  #notre-proximite > div:first-child {
+    margin-bottom: 0;
+  }
+
+  #notre-histoire {
+    padding: 5vh 0;
+  }
+  #notre-histoire .flex-items {
+    margin-bottom: 5vh;
+  }
+
+  #notre-histoire .flex-columns {
+    display: block;
+  }
+  #notre-histoie .ponton {
+    display: none;
+  }
+
+  #notre-histoire .flex-columns .flex-item:nth-child(2) {
+    width: 85%;
+  }
+
+  #mot-dirigeant {
+    padding-top: 5vh;
+  }
+  #mot-dirigeant h2 {
+    margin-bottom: unset;
+  }
+
+  #mot-dirigeant .photo-langlois {
+    width: 20vw;
+  }
+
+  /* Page Produit intermédiaire + IKEJIME*/
+
+  #bretagne-et-poulpe main {
+    overflow-x: hidden;
+  }
+
+  .bandeau_image img {
+    width: 50vw;
+    height: auto;
+  }
+
+  .nos-produits .grid-item {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .nos-produits .grid-item-deployable:hover {
+    height: 100px;
+    width: 20vw;
+  }
+
+  .grid-item-deployable:hover > div {
+    display: flex;
+  }
+
+  .grid-item-deployable2 {
+    width: 40vw;
+  }
+
+  .grid-item-deployable2 > div {
+    width: 40vw;
+    height: 200px;
+    background-size: 30vw !important;
+  }
+  .grid-item-deployable2:hover > img {
+    transform: scale(0);
+  }
+
+  /* SKREI */
+
+  #notre-projet {
+    overflow-x: hidden;
+  }
+
+  #notre-projet .container_notre-projet > p + .flex-columns {
+    flex-direction: column-reverse;
+  }
+
+  #notre-projet .flex-columns .flex-item {
+    width: 60%;
+    margin-bottom: 0px !important;
+  }
+
+  #notre-projet .flex-columns .flex-item:nth-child(2) {
+    margin-bottom: 5vh;
+  }
+
+  #notre-projet::before,
+  #notre-projet::after {
+    height: 40%;
+    top: 400px;
+  }
+
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
+    width: 40vw;
+  }
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a img {
+    height: 28vw;
+  }
+
+  /* Sub-product page */
+
+  #sub-product_content {
+    width: 90vw;
+  }
+
+  .sub-product .grid-item-deployable {
+    height: calc(15vw + 35px);
+    width: 20vw;
+  }
+
+  .sub-product .grid-item-deployable > div {
+    height: 35px;
+  }
+  .grid-item-deployable > img {
+    height: 15vw;
+  }
+
+  .grid-4-columns > div {
+    line-height: 15px;
+  }
+
+  .grid-4-columns {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+    width: 110%;
+  }
+  #sub-product_content div + p {
+    margin-top: 30px;
+  }
+}
+
+/* -----------  SMARTPHONE ------------ */
+
+@media (max-width: 600px) {
+  /* HOME */
+
+  body {
+    font-size: 11px !important;
+    overflow-x: hidden;
+  }
+
+  p {
+    margin: 1vh 0;
+  }
+
+  #hero .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .navbar .ul > li > a,
+  .navbar .ul > li > label {
+    padding: 5px 5px;
+    text-shadow: #000 1px 1px 2px;
+  }
+
+  .navbar .nested-ul .sub-liste {
+    width: 190px;
+    text-align: start;
+    /* margin: 5px 10px; */
+  }
+
+  .navbar .ul li > * {
+    text-align: center;
+  }
+
+  #hero {
+    background: url("/img/veran.jpg") -200px center/cover no-repeat;
+    height: 85vh;
+    /* min heigh pour mode paysage toute petites heigh, que ca entre pas le titre dans la navbar */
+    min-height: 400px;
+    /* pourquoi relative ? pour l'overlay qui arrive après et qui doit être absolute dans hero */
+    position: relative;
+    background-color: #fff;
+  }
+
+  #selection_titre {
+    font-size: 1.1rem;
+  }
+
+  #selection_titre .line {
+    display: none;
+  }
+
+  #selection .box h3 {
+    font-size: 1.2rem;
+  }
+
+  #selection #boxe-2 {
+    font-size: unset;
+  }
+
+  #Notre-entreprise_contenu {
+    height: unset;
+  }
+
+  #Notre-entreprise .column-1,
+  #Notre-entreprise .column-3 {
+    display: none;
+  }
+
+  #selection .box:nth-child(2) {
+    border-bottom: #333 1px dotted;
+    border-top: #333 1px dotted;
+  }
+
+  #Notre-entreprise .column-2 h2 {
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 0 !important;
+    margin-top: 4vh;
+  }
+
+  #Notre-entreprise .column-2 p {
+    margin-bottom: 1vh !important;
+  }
+
+  #Notre-entreprise .column-2::before {
+    content: "";
+    position: absolute;
+    background: url(/img/home/Phare.png) center center/cover;
+    bottom: 0;
+    left: 0;
+    height: 60%;
+    width: 20%;
+    z-index: 1;
+  }
+  #Notre-entreprise .column-2::after {
+    content: "";
+    position: absolute;
+    background: url(/img/home/mouette.png) center center/cover;
+    bottom: 0;
+    right: 0;
+    height: 60%;
+    width: 20%;
+    z-index: 1;
+  }
+
+  #Notre-entreprise .btn {
+    transform: scale(0.6);
+    margin-bottom: 4vh;
+  }
+
+  /* footer */
+
+  #footer {
+    flex-direction: column;
+  }
+
+  #footer_left,
+  #footer_middle,
+  #footer_right {
+    width: 100%;
+  }
+
+  #footer_left #footer_contacts {
+    width: 50%;
+  }
+
+  #footer_left #footer_logo {
+    width: 30%;
+    margin: 2vh 7vw;
+  }
+
+  #footer_left #footer_logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  #footer_middle #social i {
+    margin: 2vh 5vw;
+  }
+
+  #footer #footer_right #menu {
+    width: 90vw;
+    left: 3vw;
+  }
+
+  #footer #footer_right #menu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 4vh;
+  }
+
+  #footer #footer_right #toggler {
+    width: 15px;
+    height: 15px;
+    left: 10vw;
+  }
+
+  #footer #footer_right #toggler::before {
+    background-size: 20px;
+  }
+
+  /* PAGE CONTACT */
+
+  #contact,
+  #contact::before {
+    height: 1200px;
+    background-position: 6000px center;
+  }
+
+  #contact_content {
+    width: 100%;
+    height: 100%;
+    padding: 100px 30px 0 30px;
+    background: rgba(51, 51, 51, 0.3);
+    border-radius: 0;
+    color: #fff;
+    margin: 0;
+  }
+
+  /* Page BLOG */
+
+  #showcase .showcase-container {
+    grid-template-columns: repeat(1, 1fr);
+    height: 350px;
+    margin-top: 80px;
+  }
+  #home-article .articles-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #home-article .articles-container > *,
+  #home-article .card {
+    grid-row: unset !important;
+    grid-column: unset !important;
+    grid-template-columns: unset !important;
+    grid-template-rows: unset !important;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  #home-article .card:nth-child(6n + 4) {
+    background: #263670 !important;
+    color: #fff !important;
+  }
+
+  #home-article .card:nth-child(6n + 4) .date {
+    background: #2f7fc2;
+  }
+
+  #home-article .card:nth-child(6n + 2) {
+    background: #2f7fc2 !important;
+    color: #fff !important;
+  }
+
+  #home-article .card:nth-child(4n + 2) .date {
+    background: #263670 !important;
+  }
+
+  /* Decouvrir Ikagel */
+
+  #decouvrir-ikagel #rope3 {
+    display: none;
+  }
+  #notre-proximite h2 {
+    margin: 0 20px;
+  }
+  #notre-proximite .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+    justify-items: center;
+    padding: 2rem;
+  }
+  #notre-proximite .grid-container > * {
+    width: 70vw !important;
+    margin-top: 30px;
+  }
+
+  #notre-proximite .grid-container > div:nth-child(4) {
+    grid-row-start: 3;
+  }
+
+  #notre-proximite .pirogue {
+    width: 70% !important;
+  }
+
+  #notre-histoire .algues-horizontale-droite,
+  #notre-histoire .algues-horizontale-gauche {
+    display: none;
+  }
+
+  #notre-histoire .flex-columns .flex-item:nth-child(2) {
+    width: 70%;
+  }
+
+  #mot-dirigeant > .flex-columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #mot-dirigeant > .flex-columns > div {
+    width: 90%;
+  }
+  /* Page Produit intermédiaire + IKEJIME*/
+
+  .bandeau_image img {
+    width: 70vw;
+    height: auto;
+  }
+
+  .bandeau .content {
+    padding-top: 150px;
+  }
+
+  .nos-produits .grid-container {
+    padding: 0;
+  }
+
+  .nos-produits .grid-item {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .nos-produits .grid-item p {
+    font-size: 2.8vw;
+    margin: 2px 0 0 0;
+  }
+
+  .nos-produits .container-deployable {
+    margin: 50px 0;
+  }
+
+  .nos-produits .container-deployable > div {
+    grid-column: span 2;
+    width: 50vw;
+    height: 50px;
+    margin-bottom: 40px;
+  }
+
+  .nos-produits .grid-item-deployable,
+  .nos-produits .grid-item-deployable > div {
+    width: 100%;
+    height: 100%;
+  }
+
+  .grid-item-deployable2 {
+    width: 50vw;
+  }
+
+  .grid-item-deployable2 > div {
+    width: 50vw;
+    height: 100px;
+    background-size: 45vw !important;
+  }
+
+  #notre-projet .flex-items h2 {
+    padding: 0 20px;
+  }
+
+  #notre-projet .line {
+    display: none;
+  }
+
+  #notre-projet .flex-columns .flex-item {
+    width: 90%;
+  }
+
+  #notre-projet::before,
+  #notre-projet::after {
+    display: none;
+  }
+
+  #notre-projet
+    .container_notre-projet
+    .flex-columns:nth-child(3)
+    > a:nth-child(2) {
+    display: none;
+  }
+
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a {
+    width: 55vw;
+    padding: 0;
+  }
+  #notre-projet .container_notre-projet .flex-columns:nth-child(3) > a img {
+    height: 32vw;
+  }
+
+  /* Pages spécialités */
+
+  #fiche-produit p,
+  #fiche-produit a {
+    font-size: 0.8rem;
+  }
+  #fiche-produit h1 {
+    font-size: 2rem !important;
+  }
+  #fiche-produit h3,
+  #fiche-produit h2 {
+    font-size: 1.5rem !important;
+  }
+  #fiche-produit h4 {
+    font-size: 1.2rem;
+  }
+
+  #fiche-produit .contenu > .flex-items {
+    margin: 30px 0;
+  }
+  #fiche-produit .algues-horizontale-droite,
+  #fiche-produit .algues-horizontale-gauche {
+    display: none;
+  }
+  #fiche-produit h1 #fiche-produit > .flex-columns {
+    display: block;
+  }
+  #fiche-produit > .flex-columns > .column-1,
+  #fiche-produit > .flex-columns > .column-3 {
+    display: none;
+  }
+  #fiche-produit > .flex-columns > .column-2 {
+    width: 100vw;
+  }
+  #fiche-produit > .flex-columns .flex-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #fiche-produit > .flex-columns .flex-columns > * {
+    width: 95% !important;
+    height: unset;
+  }
+
+  #fiche-produit > .flex-columns .flex-columns > * > p {
+    margin: 0;
+  }
+
+  #fiche-produit > .flex-columns .flex-columns > a {
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    height: unset;
+  }
+  #fiche-produit > .flex-columns .flex-columns > a > img {
+    width: 100%;
+    height: auto;
+  }
+  #fiche-produit .flex-columns .flex-columns > a {
+    margin-bottom: 10px;
+  }
+
+  #fiche-produit .column-2 .fiche-produit_description {
+    padding: 10px;
+  }
+  /* fiche poulpe */
+
+  #poulpe-cuit #poulpito-spe {
+    display: none;
+  }
+
+  #poulpe-cuit h1 {
+    margin: 25px 0;
+  }
+  #poulpe-cuit .photos-poulpe,
+  #poulpe-cuit .photos-poulpe + a {
+    height: unset !important;
+  }
+  #poulpe-cuit .conditionnements {
+    flex-direction: column !important;
+  }
+  #poulpe-cuit .conditionnement {
+    width: 95%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  #poulpe-cuit h2 {
+    margin: 2vh 0;
+  }
+  /* sub-product page */
+
+  .sub-product > img {
+    display: none;
+  }
+  #sub-product_content {
+    width: 100%;
+    padding: 20px;
+    margin: unset;
+    margin-top: 120px;
+    border-radius: unset;
+  }
+  .sub-product .grid-item-deployable {
+    height: calc(25vw + 35px);
+    width: 30vw;
+  }
+  .grid-item-deployable > img {
+    height: 25vw;
+  }
+
+  .grid-4-columns {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

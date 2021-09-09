@@ -1,0 +1,306 @@
+/* UTILITIES */
+
+#landing-page-skrei {
+  background: #f4f4f4;
+  overflow-x: hidden !important;
+}
+
+#formulaire {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: rgba(244, 244, 244, 0.8);
+  border-radius: 1%;
+  padding: 15px 30px;
+  border: 1px #333 solid;
+}
+
+#formulaire #lb-demande-téléphone:hover {
+  cursor: pointer;
+}
+
+#formulaire #lb-demande-téléphone {
+  display: flex;
+  justify-content: center;
+}
+
+#formulaire #lb-demande-téléphone > .tel-1 > p,
+#formulaire #lb-demande-téléphone > .tel-2 > p {
+  padding: 10px 20px;
+  background: #2f7fc2;
+  color: #fff;
+  animation: animate-1 5s infinite 0s normal ease-in-out;
+}
+#formulaire #lb-demande-téléphone > .tel-2 {
+  display: none;
+}
+
+#formulaire #demande-téléphone {
+  opacity: 0;
+}
+
+#formulaire #demande-téléphone:checked ~ .tel-2 {
+  display: block;
+}
+#formulaire #demande-téléphone:checked + .tel-1 {
+  display: none;
+}
+
+#formulaire > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 75%;
+}
+
+#formulaire h3 {
+  color: #263670;
+  margin-bottom: 1vh;
+}
+
+#formulaire .form-control {
+  width: 80%;
+}
+
+#formulaire .form-control > input,
+#formulaire .form-control > textarea {
+  padding: 10px 10px;
+  border-radius: 5%;
+  outline-color: #2f7fc2;
+  border: #263670 2px solid;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* SKREI */
+
+#landing-skrei {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "citation photo-3 formulaire"
+    "text-1 text-1 formulaire"
+    "text-2 photo-2 formulaire";
+  grid-gap: 3rem;
+  padding: 50px;
+  margin-top: 80px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#landing-skrei #background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 500px;
+  z-index: -1;
+}
+#landing-skrei #background img {
+  width: 100%;
+  height: 100%;
+}
+
+#landing-skrei > div {
+  align-self: center;
+  justify-self: center;
+}
+
+#landing-skrei #title {
+  grid-area: title;
+  text-align: center;
+  color: #fff;
+  text-shadow: #000 1px 1px 10px;
+  font-size: 1.3rem;
+}
+#landing-skrei #citation {
+  grid-area: citation;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: lighter;
+  color: #fff;
+  text-shadow: #000 1px 1px 10px;
+  font-size: 1.2vw;
+}
+#landing-skrei #text-1 {
+  grid-area: text-1;
+  border-radius: 1%;
+  padding: 20px;
+  font-size: 1.1vw;
+}
+#landing-skrei #text-2 {
+  grid-area: text-2;
+  border-radius: 1%;
+  padding: 20px;
+  font-size: 1vw;
+  min-width: 33vw;
+}
+#landing-skrei #photo-1 {
+  grid-area: photo-1;
+}
+#landing-skrei #photo-2 {
+  grid-area: photo-2;
+}
+#landing-skrei #photo-3 {
+  grid-area: photo-3;
+}
+#landing-skrei #formulaire {
+  grid-area: formulaire;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: rgba(244, 244, 244, 0.8);
+  border-radius: 1%;
+  padding: 15px 30px;
+  border: 1px #333 solid;
+}
+
+#landing-skrei {
+  text-align: justify;
+}
+
+#landing-skrei .photo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#landing-skrei .photo img {
+  border-radius: 2%;
+}
+
+#landing-skrei #photo-3 {
+  width: 17vw;
+  height: 12vw;
+}
+
+#landing-skrei #photo-2 a {
+  height: 70%;
+}
+
+#landing-skrei #photo-2 img {
+  height: 100%;
+}
+
+@keyframes animate-1 {
+  50% {
+    background: #263670;
+    text-shadow: #fff 1px 1px 10px;
+  }
+
+  100% {
+    background: #2f7fc2;
+  }
+}
+
+/* Thank-you page */
+
+#thank-you #container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#thank-you h1 {
+  margin-bottom: 10vh;
+}
+
+/*  Tablettes  */
+
+@media (max-width: 1100px) {
+  #landing-skrei {
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "citation photo-3"
+      "text-1 text-1"
+      "photo-2 photo-2"
+      "text-2 text-2"
+      "formulaire formulaire "
+      "formulaire formulaire";
+    grid-gap: 3rem;
+    padding: 50px;
+    margin-top: 150px;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden !important;
+  }
+
+  #landing-skrei #background {
+    height: 640px;
+  }
+
+  #landing-skrei #title {
+    height: 170px;
+  }
+
+  #landing-skrei #citation,
+  #landing-skrei #text-1,
+  #landing-skrei #text-2 {
+    font-size: 16px;
+  }
+
+  #landing-skrei #photo-3 {
+    width: 300px !important;
+  }
+
+  #landing-skrei #photo-2 {
+    width: 80% !important;
+    height: auto !important;
+  }
+}
+
+/* Smartphones */
+
+@media (max-width: 600px) {
+  #landing-skrei {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "citation"
+      "photo-3"
+      "text-1"
+      "photo-2"
+      "text-2"
+      "formulaire";
+    grid-gap: 1rem;
+    padding: 20px;
+    margin-top: 150px;
+    grid-template-columns: repeat(1, 1fr);
+    overflow-x: hidden !important;
+  }
+  #landing-skrei #title {
+    height: unset;
+  }
+
+  #landing-skrei #background {
+    margin-top: 115px;
+    height: 300px !important;
+    overflow-x: hidden;
+  }
+  #landing-skrei #background img {
+    width: auto !important;
+  }
+
+  #landing-skrei #citation {
+    color: #000;
+    text-shadow: unset;
+  }
+  #landing-skrei #photo-3 {
+    width: unset;
+    height: unset;
+  }
+  #landing-skrei #photo-3 a {
+    height: 100%;
+  }
+  #landing-skrei #photo-3 a img {
+    height: auto;
+  }
+}

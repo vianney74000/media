@@ -1,0 +1,113 @@
+/* Utilities */
+
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+}
+
+#article .card > img {
+  max-height: 70vh;
+  width: auto;
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+
+#article .container {
+  max-width: 70vw;
+}
+
+.boutons-information {
+  position: fixed;
+  top: 30vh;
+  left: 2vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+.boutons-information p {
+  
+  font-size: 0.8rem;
+}
+
+.boutons-information > * {
+  margin: 1vh 0;
+}
+
+#boutons-partage {
+  width: 12vw;
+}
+
+#article h1 {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+#article .card > * {
+  margin-bottom: 5vh;
+}
+
+
+.lien-blog {
+  text-decoration: underline;
+  color: #2f7fc2;
+}
+
+/* Skrei */
+
+.double-img {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-gap: 10%;
+  padding: 30px 30px;
+}
+
+.double-img > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Smartphone */
+
+@media (max-width: 600px) {
+  #article .container,
+  #article .card {
+    width: 100vw !important;
+    max-width: unset;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+  }
+
+  #article .card {
+    padding: 10px;
+  }
+
+  #boutons-partage .contenu {
+    display: none;
+  }
+  #boutons-partage .linkedin-share-button {
+    position: fixed;
+    top: 140px;
+    left: 50%;
+    transform: translate(-100%);
+  }
+
+  #boutons-partage {
+    background-color: transparent;
+  }
+  #boutons-partage .fb-share-button {
+    position: fixed;
+    top: 140px;
+    left: 50%;
+    transform: translate(10%);
+  }
+}
